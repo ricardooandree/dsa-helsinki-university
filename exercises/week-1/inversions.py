@@ -11,8 +11,15 @@ The list [4,3,2,1] contains the inversions (0,1), (0,2), (0,3), (1,2), (1,3) and
 
 
 def count(list):
-    # TODO
-    pass
+    n = len(list)
+    counter = 0
+
+    for i in range(0, n):
+        for j in range(i + 1, n):
+            if list[i] > list[j]:
+                counter += 1
+
+    return counter
 
 if __name__ == "__main__":
     print(count([1,3,2])) # 1

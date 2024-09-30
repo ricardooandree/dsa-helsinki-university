@@ -3,8 +3,7 @@ Report the time complexity of each of the following algorithms. The correct answ
 When you press the submit button, your answers are checked, and you can then change your answers. When all answers are correct, you get a point for the exercise.
 """
 
-
-# Algorithm 1 - TODO Time complexity:
+# Algorithm 1 - Time complexity: O(n)
 def algo1(n):
     result = 0
     for i in range(n):
@@ -12,7 +11,7 @@ def algo1(n):
     return result
 
 
-# Algorithm 2 - TODO Time complexity:
+# Algorithm 2 - Time complexity: O(n)
 def algo2(n):
     result = 0
     for i in range(n):
@@ -22,12 +21,12 @@ def algo2(n):
     return result
 
 
-# Algorithm 3 - TODO Time complexity:
+# Algorithm 3 - Time complexity: O(1)
 def algo3(n):
     return 5*n**2
 
 
-# Algorithm 4 - TODO Time complexity:
+# Algorithm 4 - Time complexity: O(n)
 def algo4(n):
     result = 0
     while n > 0:
@@ -36,7 +35,7 @@ def algo4(n):
     return result
 
 
-# Algorithm 5 - TODO Time complexity:
+# Algorithm 5 - Time complexity: O(n^2)
 def algo5(n):
     result = 0
     for i in range(n):
@@ -45,7 +44,7 @@ def algo5(n):
     return result
 
 
-# Algorithm 6 - TODO Time complexity:
+# Algorithm 6 - Time complexity: O(1)
 def algo6(n):
     result = 0
     for i in range(10):
@@ -53,7 +52,7 @@ def algo6(n):
     return result
 
 
-# Algorithm 7 - TODO Time complexity:
+# Algorithm 7 - Time complexity: O(1)
 def algo7(n):
     result = n
     for i in range(100):
@@ -62,7 +61,7 @@ def algo7(n):
     return result
 
 
-# Algorithm 8 - TODO Time complexity:
+# Algorithm 8 - Time complexity: O(1)
 def algo8(n):
     return 1
     result = 0

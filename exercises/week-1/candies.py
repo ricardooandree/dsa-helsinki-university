@@ -12,8 +12,7 @@ For example, two gummy candies and one chocolate candy cost a total of 10 euros 
 
 
 def count(a, b, c):
-    # TODO
-    pass
+    return c // min(a, b)
 
 
 if __name__ == "__main__":

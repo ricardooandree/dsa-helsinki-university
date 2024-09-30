@@ -9,8 +9,13 @@ In a file repeat.py, implement a function find that returns the length of the sh
 
 
 def find(string):
-    # TODO
-    pass
+    pattern = ""
+
+    for char in string:
+        pattern += char
+
+        if pattern * (len(string) // len(pattern)) == string:
+            return len(pattern)
 
 
 if __name__ == "__main__":

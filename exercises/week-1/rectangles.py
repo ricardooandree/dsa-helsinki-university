@@ -14,9 +14,42 @@ Implement the function in a file rectangles.py.
 """
 
 
+def area_of_rectangle(rect1):
+    # Rectangle area = (x2 - x1) * (y1 - y2)
+    rect1_area = max(0, rect1[2] - rect1[0]) * max(0, rect1[1] - rect1[3])
+    return rect1_area
+
+
+def sum_area(rect1, rect2, rect3):
+    return area_of_rectangle(rect1) + area_of_rectangle(rect2) + area_of_rectangle(rect3)
+
+
+def intersection_rectangle(rect1, rect2):
+    x1 = max(rect1[0], rect2[0])
+    y1 = min(rect1[1], rect2[1])
+    x2 = min(rect1[2], rect2[2])
+    y2 = max(rect1[3], rect2[3])
+
+    return (x1, y1, x2, y2)
+
+
+def double_intersection_rectangle(rect1, rect2, rect3):
+    intersection_rect12 = intersection_rectangle(rect1, rect2)
+    intersection_rect123 = intersection_rectangle(intersection_rect12, rect3)
+
+    return intersection_rect123
+
+
 def area(rect1, rect2, rect3):
-    # TODO
-    pass
+    # Rectangle = (x1, y1, x2, y2)
+    # Mathematical formula: |A U B U C| = |A| + |B| + |C| - |A /\ B| - |B /\ C| - |A /\ C| + |A /\ B /\ C|
+    total_area = sum_area(rect1, rect2, rect3)
+    intersection_rect12_area = area_of_rectangle(intersection_rectangle(rect1, rect2))
+    intersection_rect23_area = area_of_rectangle(intersection_rectangle(rect2, rect3))
+    intersection_rect13_area = area_of_rectangle(intersection_rectangle(rect1, rect3))
+    intersection_rect123 = area_of_rectangle(double_intersection_rectangle(rect1, rect2, rect3))
+
+    return total_area - intersection_rect12_area - intersection_rect23_area - intersection_rect13_area + intersection_rect123
 
 
 if __name__ == "__main__":

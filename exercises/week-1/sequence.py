@@ -8,8 +8,15 @@ In a file sequence.py, implement a function generate that returns the number at 
 
 
 def generate(index):
-    # TODO
-    pass
+    count = 0
+    value = 0
+
+    while count < index:
+        value += 1
+        if str(value)[0] == str(value)[-1]:
+            count += 1
+            
+    return value
 
 if __name__ == "__main__":
     print(generate(1)) # 1

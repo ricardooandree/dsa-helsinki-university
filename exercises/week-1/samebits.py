@@ -10,8 +10,7 @@ Explanation: When the string is 01101, the best solution is to change both 0-bit
 
 
 def count(string):
-    # TODO
-    pass
+    return min(string.count("0"), string.count("1"))
 
 
 if __name__ == "__main__":
