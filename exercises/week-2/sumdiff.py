@@ -1,6 +1,6 @@
 """ Description:
-Create a list that contains the numbers 1 \dots n and where each pair of consecutive numbers has a different sum. Any list satisfying the conditions is acceptable.
-You may assume that n is in the range 1 \dots 100.
+Create a list that contains the numbers 1 ... n and where each pair of consecutive numbers has a different sum. Any list satisfying the conditions is acceptable.
+You may assume that n is in the range 1 ... 100.
 In a file sumdiff.py, implement a function create that returns the required list.
 """
 
@@ -12,8 +12,9 @@ Since all the sums are different, the solution is valid. For example the solutio
 
 
 def create(n):
-    # TODO
-    pass
+    if n <= 1:
+        return [n]
+    return [i + 1 for i in range(n)]
 
 if __name__ == "__main__":
     print(create(6)) # [3, 1, 6, 2, 4, 5]
